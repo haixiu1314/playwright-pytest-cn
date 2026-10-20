@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automation-framework"
+version = "2.0.0"
+description = "支持接口与 Web 测试的中文自动化测试平台"
+requires-python = ">=3.11"
+dependencies = ["pytest>=8,<10", "playwright>=1.50,<2", "PyYAML>=6,<7", "Jinja2>=3.1,<4", "python-dotenv>=1,<2"]
+
+[tool.setuptools.packages.find]
+include = ["framework*", "pages*", "test_platform*"]
+
+[tool.setuptools.package-data]
+"framework.reporting" = ["templates/*.j2"]
+"test_platform" = ["static/*"]

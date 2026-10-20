@@ -1,0 +1,11 @@
+.venv/
+.browsers/
+.env
+.runtime/
+.platform/
+reports/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+auth-state*.json

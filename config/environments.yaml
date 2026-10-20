@@ -1,0 +1,33 @@
+project_name: 通用自动化测试
+default_environment: local
+environments:
+  local:
+    web_base_url: http://127.0.0.1:3000
+    api_base_url: http://127.0.0.1:3000
+    allow_write: true
+    verify_tls: true
+    allowed_origins: []
+  staging:
+    web_base_url: https://staging.example.com
+    api_base_url: https://api-staging.example.com
+    allow_write: true
+    verify_tls: true
+    allowed_origins: []
+  production:
+    web_base_url: https://example.com
+    api_base_url: https://api.example.com
+    allow_write: false
+    verify_tls: true
+    allowed_origins: []
+execution:
+  browser: msedge
+  headless: true
+  timeout_ms: 15000
+  retries: 0
+report:
+  locale: zh-CN
+  directory: reports
+  screenshot_on_failure: true
+  trace: retain-on-failure
+  retention_days: 7
+  sensitive_fields: [password, token, secret, authorization, cookie, set-cookie]

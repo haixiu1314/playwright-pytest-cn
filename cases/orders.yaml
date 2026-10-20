@@ -1,0 +1,30 @@
+# 填写真实路径和断言后，将 enabled 改为 true。无需重复填写域名。
+module: orders
+name: orders
+enabled: false
+variables: {}
+cases:
+- id: api_check
+  name: 接口检查（请替换路径及断言）
+  access: readonly
+  tags:
+  - smoke
+  request:
+    method: GET
+    path: /replace-me
+  expect:
+    status: 200
+    json:
+      code: 0
+- id: web_check
+  name: 页面检查（请替换路径及标题）
+  access: readonly
+  tags:
+  - smoke
+  steps:
+  - web:
+      action: goto
+      path: /replace-me
+  - web:
+      action: assert_title
+      value: 请填写实际页面标题

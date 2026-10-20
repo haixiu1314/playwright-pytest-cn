@@ -1,0 +1,4 @@
+module: product
+name: 商品
+enabled: true
+cases: []

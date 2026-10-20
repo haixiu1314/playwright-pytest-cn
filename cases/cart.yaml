@@ -1,0 +1,15 @@
+module: cart
+name: 购物车
+enabled: true
+cases:
+- id: cart_add
+  name: 添加商品成功
+  access: write
+  enabled: true
+  tags: []
+  request:
+    method: POST
+    path: /api/cart/add?userId=1&productId=5&delta=1
+    headers: {}
+  expect:
+    status: 200
